@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/utils/breakpoints.dart';
+import 'package:myapp/utils/common.dart';
 import 'package:myapp/widgets/layout/auth_container.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -30,24 +30,25 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final _size = MediaQuery.of(context).size;
-
     return AuthContainer(
-      title: "Login",
+      title: "Note App",
       child: Form(
         key: _formKey,
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             TextFormField(
+              decoration: InputDecoration(
+                hintText: "Enter your email here",
+                fillColor: melonColor.withOpacity(0.5),
+                filled: true,
+                border: const OutlineInputBorder(
+                  borderSide: BorderSide.none,
+                ),
+              ),
               autocorrect: false,
               enableSuggestions: false,
               keyboardType: TextInputType.emailAddress,
-              decoration: const InputDecoration(
-                hintText: "Enter your email here",
-                border: OutlineInputBorder(),
-              ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return "Invalid email";
@@ -60,25 +61,49 @@ class _LoginScreenState extends State<LoginScreen> {
               },
             ),
             const SizedBox(
-              height: 30,
+              height: 12,
             ),
             TextFormField(
-              onChanged: (value) {
-                _authData['password'] = value;
-              },
+              decoration: InputDecoration(
+                hintText: "Enter your password here",
+                fillColor: melonColor.withOpacity(0.5),
+                filled: true,
+                border: const OutlineInputBorder(
+                  borderSide: BorderSide.none,
+                ),
+              ),
               obscureText: true,
               autocorrect: false,
               enableSuggestions: false,
-              decoration: const InputDecoration(
-                hintText: "Enter your password here",
-                border: OutlineInputBorder(),
-              ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return "Invalid Email";
+                }
+
+                return null;
+              },
+              onChanged: (value) {
+                _authData['email'] = value;
+              },
             ),
             const SizedBox(
-              height: 30,
+              height: 16,
             ),
             ElevatedButton(
-              child: const Text("Register"),
+              child: const Text(
+                "Login",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                ),
+                minimumSize: const Size.fromHeight(50),
+              ),
               onPressed: () async {
                 _formKey.currentState!.save();
                 debugPrint(_authData.toString());
@@ -91,7 +116,42 @@ class _LoginScreenState extends State<LoginScreen> {
                 //         email: _email, password: _password);
                 // debugPrint(credential as String);
               },
-            )
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            TextButton(
+              onPressed: () {},
+              child: const Text("Forgotten password?"),
+              style: TextButton.styleFrom(),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 20),
+              child: Divider(
+                height: 1,
+                color: Color(0xFFDADDE1),
+              ),
+            ),
+            ElevatedButton(
+              child: const Text(
+                "Create New Account",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.green,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 16,
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, "/register");
+              },
+            ),
           ],
         ),
       ),

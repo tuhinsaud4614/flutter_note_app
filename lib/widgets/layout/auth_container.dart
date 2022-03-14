@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/utils/breakpoints.dart';
 import 'package:myapp/utils/common.dart';
-import 'package:myapp/widgets/layout/responsive_layout.dart';
 
 class AuthWrapper extends StatelessWidget {
   final Widget child;
@@ -27,16 +26,16 @@ class AuthWrapper extends StatelessWidget {
             color: Colors.black.withOpacity(0.2),
           ),
           BoxShadow(
-            offset: const Offset(0, 1),
-            blurRadius: 1,
+            offset: const Offset(0, 2),
+            blurRadius: 4,
             spreadRadius: 0,
-            color: Colors.black.withOpacity(0.14),
+            color: Colors.black.withOpacity(0.1),
           ),
           BoxShadow(
-            offset: const Offset(0, 1),
-            blurRadius: 3,
+            offset: const Offset(0, 8),
+            blurRadius: 16,
             spreadRadius: 0,
-            color: Colors.black.withOpacity(0.12),
+            color: Colors.black.withOpacity(0.10),
           ),
         ],
         borderRadius: const BorderRadius.all(

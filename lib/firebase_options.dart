@@ -35,39 +35,39 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD74opGpGV0HN3DUsWbbtEXavBzFAGuu3E',
-    appId: '1:71512324137:web:4ebd183bca5dbea25bc438',
-    messagingSenderId: '71512324137',
-    projectId: 'my-app-flutter-project',
-    authDomain: 'my-app-flutter-project.firebaseapp.com',
-    storageBucket: 'my-app-flutter-project.appspot.com',
+    apiKey: 'AIzaSyDHRSploz6PNgFehvQ8fTQelCM2Lxv3GB0',
+    appId: '1:701114978322:web:0995c7c800110af2bd48cb',
+    messagingSenderId: '701114978322',
+    projectId: 'note-app-myapp',
+    authDomain: 'note-app-myapp.firebaseapp.com',
+    storageBucket: 'note-app-myapp.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDQwwRmeWnAeD7ua-Mw2zW-nnrRVywhKVE',
-    appId: '1:71512324137:android:9f2e48df05108ece5bc438',
-    messagingSenderId: '71512324137',
-    projectId: 'my-app-flutter-project',
-    storageBucket: 'my-app-flutter-project.appspot.com',
+    apiKey: 'AIzaSyD30Bsrve0rxrQU83krRxhEhcrf8S5fDNg',
+    appId: '1:701114978322:android:d5de1877f9a83835bd48cb',
+    messagingSenderId: '701114978322',
+    projectId: 'note-app-myapp',
+    storageBucket: 'note-app-myapp.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD72XRAHlV9O14yDOrJyf_DLAn6YNaRVho',
-    appId: '1:71512324137:ios:6a46c3ac7c1a3d705bc438',
-    messagingSenderId: '71512324137',
-    projectId: 'my-app-flutter-project',
-    storageBucket: 'my-app-flutter-project.appspot.com',
-    iosClientId: '71512324137-oq1ic25jq97n2p1ipbmr0t3a4lfdg7fp.apps.googleusercontent.com',
-    iosBundleId: 'com.therat.myapp',
+    apiKey: 'AIzaSyAAxQWYrxLotKtxARNra6_xvX2EXJQR-sk',
+    appId: '1:701114978322:ios:6a81e0a2d83e3e32bd48cb',
+    messagingSenderId: '701114978322',
+    projectId: 'note-app-myapp',
+    storageBucket: 'note-app-myapp.appspot.com',
+    iosClientId: '701114978322-qg7e4ku7ttf48vu3et83ikdqiihuodbu.apps.googleusercontent.com',
+    iosBundleId: 'com.ther',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyD72XRAHlV9O14yDOrJyf_DLAn6YNaRVho',
-    appId: '1:71512324137:ios:014cdd1e48ce077a5bc438',
-    messagingSenderId: '71512324137',
-    projectId: 'my-app-flutter-project',
-    storageBucket: 'my-app-flutter-project.appspot.com',
-    iosClientId: '71512324137-fvihtou04shk5db4hupl36r641q1dkil.apps.googleusercontent.com',
-    iosBundleId: 'com.therat.myap',
+    apiKey: 'AIzaSyAAxQWYrxLotKtxARNra6_xvX2EXJQR-sk',
+    appId: '1:701114978322:ios:58af18a2eb0a243ebd48cb',
+    messagingSenderId: '701114978322',
+    projectId: 'note-app-myapp',
+    storageBucket: 'note-app-myapp.appspot.com',
+    iosClientId: '701114978322-ctot9lebs67s8ccomha7l0edn0rm1d35.apps.googleusercontent.com',
+    iosBundleId: 'com.th',
   );
 }

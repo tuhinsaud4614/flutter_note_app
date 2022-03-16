@@ -4,6 +4,7 @@ import 'package:myapp/firebase_options.dart';
 import 'package:myapp/screens/home_screen.dart';
 import 'package:myapp/screens/login_screen.dart';
 import 'package:myapp/screens/registration_screen.dart';
+import 'package:myapp/utils/common.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,8 +28,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/login",
       routes: {
         "/": (context) => const HomeScreen(),
-        "/login": (context) => const LoginScreen(),
-        "/register": (context) => const RegistrationScreen(),
+        "/login": (context) => LoginScreen(),
+        "/register": (context) => RegistrationScreen(),
       },
     );
   }

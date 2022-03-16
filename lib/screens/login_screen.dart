@@ -2,31 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:myapp/utils/common.dart';
 import 'package:myapp/widgets/layout/auth_container.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatelessWidget {
+  LoginScreen({Key? key}) : super(key: key);
 
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-  late final GlobalKey<FormState> _formKey;
-  late final Map<String, String> _authData;
-
-  @override
-  void initState() {
-    super.initState();
-    _formKey = GlobalKey<FormState>();
-    _authData = {
-      'email': '',
-      'password': '',
-    };
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final Map<String, String> _authData = {
+    'email': '',
+    'password': '',
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +106,6 @@ class _LoginScreenState extends State<LoginScreen> {
             TextButton(
               onPressed: () {},
               child: const Text("Forgotten password?"),
-              style: TextButton.styleFrom(),
             ),
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 20),
